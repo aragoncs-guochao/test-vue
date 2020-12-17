@@ -2,6 +2,8 @@
   <div
     class="container container1280 container1100 mt-60 mt-xs-30 ticketList-wrapper"
     id="ticketList"
+    data-static="{% static 'fonts/AktivGrotesk-Bold.woff2' %}"
+    data-url="{% url 'shows:list' %}"
   >
     <div class="row">
       <div v-for="(show, index) in shows" :key="show.insomniac_id">
@@ -31,7 +33,7 @@
               <p class="ms-addr">{{ show.location }}</p>
             </div>
             <div class="caption">
-              <router-link class="btn In-btn btn-reg" :to="{ name: 'show-detail', params: { id: show.insomniac_id }}">{{ show.button_label }}</router-link>
+              <a href="#" class="btn In-btn btn-reg">{{ show.button_label }}</a>
             </div>
           </div>
         </div>
@@ -49,7 +51,7 @@ import footerbar from "../components/FooterBar.vue";
 Vue.use(VueAxios, axios);
 
 export default {
-  name: "home",
+  name: "show_detail",
   data: function () {
     return { shows: {} };
   },

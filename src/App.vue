@@ -1,24 +1,23 @@
 <template>
-  <div id='app'>
-    <navbar/>
+  <div id="app">
+    <navbar />
     <router-view></router-view>
-    <footerbar/>
+    <footerbar />
   </div>
 </template>
 
 <script>
-import navbar from './components/NavBar.vue'
-import footerbar from './components/FooterBar.vue'
+import navbar from "./components/NavBar.vue";
+import footerbar from "./components/FooterBar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     navbar,
-    footerbar
-  }
-}
+    footerbar,
+  },
+};
 </script>
 
 <style>
-
 </style>
